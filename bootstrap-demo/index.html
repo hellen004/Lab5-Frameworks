@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/
+bootstrap.min.css "
+      rel="stylesheet"
+    />
+    <style>
+      .hover-zoom {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-zoom:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">My Online shopping Platform</a>
+      </div>
+    </nav>
+
+    <!-- Grid Layout -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Accessories</h2>
+          <p>For all your accessories and beauty items.</p>
+          <img
+            src="/harper-sunday-b5NwJj4bVcg-unsplash.jpg"
+            alt="accessories"
+            class="img-fluid rounded hover-zoom"
+            style="max-height: 300px; object-fit: cover"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>Clothing</h2>
+          <p>For the latest clothing trends</p>
+          <img
+            src="/alyssa-strohmann-TS--uNw-JqE-unsplash.jpg"
+            alt="clothing"
+            class="img-fluid rounded hover-zoom"
+            style="max-height: 300px; object-fit: cover"
+          />
+        </div>
+      </div>
+
+      <!-- Button and Alert -->
+      <div class="mt-4">
+        <a
+          href="../tailwind-demo/index.html"
+          target="_blank"
+          class="btn btn-primary"
+          onclick="showAlert()"
+        >
+          Start shopping
+        </a>
+
+        <div id="myAlert" class="alert alert-success mt-3 d-none" role="alert">
+          Sign in to start shopping!
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showAlert() {
+        document.getElementById("myAlert").classList.remove("d-none");
+      }
+    </script>
+  </body>
+</html>
